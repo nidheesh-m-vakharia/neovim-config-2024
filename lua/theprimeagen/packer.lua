@@ -22,32 +22,9 @@ return require('packer').startup(function(use)
             -- ...
         }}
     use {
-        'lervag/vimtex',
-        opt = true,
-        config = function ()
-            vim.g.vimtex_view_method = 'zathura'
-            vim.g.vimtex_compiler_latexmk_engines = {
-                _ = '-xelatex'
-            }
-            vim.g.tex_comment_nospell = 1
-            vim.g.vimtex_compiler_progname = 'nvr'
-            vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
-            vim.g.vimtex_view_general_options_latexmk = '--unique'
-        end,
-        ft = 'tex'
-    }
-    use {
         "luckasRanarison/tailwind-tools.nvim",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
         opts = {} -- your configuration
-    }
-    use {
-        'maxmx03/solarized.nvim',
-        config = function()
-            vim.o.background = 'dark' -- or 'light'
-
-            vim.cmd.colorscheme 'solarized'
-        end
     }
     use 'kyazdani42/nvim-web-devicons'
     use('neovim/nvim-lspconfig')

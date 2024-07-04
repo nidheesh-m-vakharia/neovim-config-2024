@@ -6,3 +6,4 @@ end
 autopair.setup {
     disable_filetype = { "TelescopePrompt", 'vim' },
 }
+
